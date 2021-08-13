@@ -134,7 +134,8 @@ header {
 }
 
 .image{
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    margin-top: 10px;
 }
 
 .main-content {
@@ -181,8 +182,9 @@ footer {
     color: white;
 }
 
-.text {
+.textbox {
     margin-bottom: 1cm;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
+    width: 50%
  }
