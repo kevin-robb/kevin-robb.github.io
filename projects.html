@@ -10,7 +10,7 @@
             <div id="header" class="animate">
                 <header>
                     <a href="index.html">
-                        <img src="images/KR_logo.png" width="150" alt="KR" class="logo" />
+                        <img src="images/KR_logo.png" width="100" alt="KR" class="logo" />
                     </a>
                     <div class="logo-text">Kevin Robb</div>
                     <nav>
@@ -22,24 +22,49 @@
                     </nav>
                 </header>
             </div>
+
             <div id="content-image" class="animate">
-                <img src="Images/grapple.png" width="2000" alt="logo" />
+                <!-- <img src="Images/grapple.png" width="2000" alt="logo" /> -->
                 <h2 class="">I've been making robots and similar projects for a long time!</h2>
+                <h2 class="">Many of these are featured below.</h2>
             </div>
+            <p class="text">
+                <h2 class="">I've been making robots and similar projects for a long time!</h2>
+                <h2 class="">Many of these are featured below.</h2>
+             </p>
             <!-- IGVC -->
+
+            <figure>
+                <img src="images/aw_open.JPG" width="450px" alt="logo" />
+                <figcaption>Fig.1 - Test.</figcaption>
+            </figure> 
+            
             <div class="image-container animate">
-                <img class="image" src="images/lidar_mount.png" width="450px" alt="logo" />
+                <img class="image" src="images/aw_open.JPG" width="450px" alt="logo" />
                 <h4 class="">Intelligent Ground Vehicle Competition: Auto-Nav First Place. The <i>Aluminum Whale</i> is essentially a small self-driving car. I designed the localization system which included a custom EKF.</h4>
                 <img class="image" src="images/SCR_igvc_team.jpeg" width="450px" alt="logo" />
+            </div>
+            <div class="image-container animate">
+                <img class="image" src="images/lidar_mount.png" width="450px" alt="logo" />
+                <img class="image" src="images/igvc_awards.JPG" width="450px" alt="logo" />
+                <div id="content-image" class="animate">
+                    <h1 class="button"><a href="https://github.com/SoonerRobotics/igvc_software_2021">Git Repo</a></h1>
+                    <h1 class="button"><a href="docs/IGVC_2021_Design_Report.pdf">Design Report</a></h1>
+                    <h1 class="button"><a href="https://TODO">Interview</a></h1>
+                </div>
             </div>
             <!-- Senior Design Project -->
             <div class="image-container animate">
                 <h4 class="">Engineering Physics senior design project. I fully derived a Kalman Filter for tracking a mobile robot's position and velocity, and created the framework to run it in simulation. I then used evolutionary computation methods to optimize the KF parameters to in turn optimize localization, improving on my manual tuning tenfold. </h4>
                 <img class="image" src="images/lidar_mount.png" width="450px" alt="logo" />
-                <img class="image" src="images/SCR_igvc_team.jpeg" width="450px" alt="logo" />
+                <div id="content-image" class="animate">
+                    <h1 class="button"><a href="https://github.com/kevin-robb/capstone-kf-ml">Git Repo</a></h1>
+                    <h1 class="button"><a href="docs/kevinrobb_final_paper.pdf">Paper</a></h1>
+                </div>
             </div>
             <!-- Fantasy Dice-->
             <div class="image-container animate">
+                <img class="image" src="images/dice_CV.jpg" width="450px" alt="logo" />
                 <h4 class="">Fantasy Dice was my team's project for Hacklahoma 2021 in 24 hours, which won 2nd place overall and Best Use of Google Cloud Platform. The theme was Retro, and we love Dungeons & Dragons, so we decided to make a phone app that can import character sheets and automatically perform rolls with one click, or prompt the user with which dice they should roll; it then uses OpenCV to detect the dice values, calculate the result, and share that and the video feed with the other players in the lobby.</h4>
                 <div id="content-image" class="animate">
                     <h1 class="button"><a href="https://github.com/SarahBrown/fantasy-dice">Git Repo</a></h1>
@@ -48,10 +73,12 @@
             </div>
             <!-- SCR SWC -->
             <div class="image-container animate">
+                <img class="image" src="images/SWC_sim_obstacles.png" width="450px" alt="logo" />
                 <h4 class="">The <i>SCR Software Challenge</i> was an in-house competition we ran entirely in simulation to keep us occupied in Summer 2020. I created a full ROS architecture from scratch to perform localization, navigation, and control to complete randomly generated courses quickly and autonomously.</h4>
             </div>
             <!-- Stemmy -->
             <div class="image-container animate">
+                <img class="image" src="images/stemmy.png" width="450px" alt="logo" />
                 <h4 class="">Stemmy is a web-app I made with a team for Hacklahoma 2020 in 24 hours, which won 3rd place overall. The theme for this hackathon was STEM education, so our app was designed as a math game that a classroom can play together in a computer lab. I wrote the server that keeps track of lobbies, leaderboards, and individual users, as well as the game logic.</h4>
                 <div id="content-image" class="animate">
                     <h1 class="button"><a href="http://github.com/noahzemlin/stemmy-online">Git Repo</a></h1>
@@ -61,15 +88,18 @@
             <!-- NRC -->
             <div class="image-container animate">
                 <h4 class="">National Robotics Challenge: Autonomous Vehicle Competition. A small autonomous racing robot that runs in a parking lot on a known course. I created the navigation and path planning systems that turn a goal trajectory into motor commands and keeps it on the path with Pure Pursuit and a PID.</h4>
-                <img class="image" src="images/lidar_mount.png" width="450px" alt="logo" />
-                <img class="image" src="images/SCR_igvc_team.jpeg" width="450px" alt="logo" />
+                <img class="image" src="images/NRC_bot.jpg" width="450px" alt="logo" />
+                <img class="image" src="images/NRC_sim.png" width="450px" alt="logo" />
             </div>
             <!-- Mercury -->
             <div class="image-container animate">
+                <img class="image" src="images/merc.jpg" width="450px" alt="logo" />
                 <h4 class=""><i>Mercury Remote Robot Challenge</i>: 2nd place. This competition mimicks a far-away robot being teleoperated by requiring our driver to be more than 50 miles away while running the course, seeing only through the robot's onboard camera and sensors.</h4>
+                <img class="image" src="images/merc_team.jpg" width="450px" alt="logo" />
             </div>
             <!-- Bee Clicker -->
             <div class="image-container animate">
+                <img class="image" src="images/bee.png" width="450px" alt="logo" />
                 <h4 class="">Bee Clicker is a game that makes you care about the bees. This was my first hackathon, and my team placed in the top ten with Bee Clicker, also winning Best Domain Name. This was for Hacklahoma 2019, for which the theme was Save the Bees. The game is still playable at <a href="beeclick.org"><u>beeclick.org</u></a>. Please play it!</h4>
                 <div id="content-image" class="animate">
                     <h1 class="button"><a href="beeclick.org">beeclick.org</a></h1>
@@ -79,7 +109,13 @@
             </div>
             <!-- Honors Thesis -->
             <div class="image-container animate">
+                <img class="image" src="images/FYRE_symposium.jpg" width="450px" alt="logo" />
                 <h4 class="">This research project involved creating a full Java codebase to simulate many generations of agents making choices and evolving with a custom genetic algorithm. My goal was to explore the effect of nurturing and environmental changes on the evolution of risk adversity (or lack thereof).</h4>
+                <div id="content-image" class="animate">
+                    <h1 class="button"><a href="https://github.com/kevin-robb/real-lab-risky-RL">Git Repo</a></h1>
+                    <h1 class="button"><a href="docs/URLA_paper.pdf">Paper</a></h1>
+                    <h1 class="button"><a href="docs/FYRE Poster.pdf">Poster</a></h1>
+                </div>
             </div>
             <!-- Sumobot -->
             <div class="image-container animate">

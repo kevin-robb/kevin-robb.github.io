@@ -43,6 +43,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
+    background: rgb(14, 88, 85);
 }
 
 .logo {
@@ -178,4 +179,10 @@ footer {
     padding: 3px;
     background-color: rgb(4, 145, 138);
     color: white;
-  }
+}
+
+.text {
+    margin-bottom: 1cm;
+    align-items: center;
+    justify-content: center;
+ }
