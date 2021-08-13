@@ -119,14 +119,14 @@ header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     cursor: default;
 }
 
 .button{
     margin-top: 4%;
     font-size: 40px;
-    background-color: rgba(	252, 92, 101);
+    background-color: rgb(3, 33, 43);
     border: none;
     border-radius: 7px;
     cursor: pointer;
@@ -172,3 +172,10 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+footer {
+    /* text-align: center; */
+    padding: 3px;
+    background-color: rgb(4, 145, 138);
+    color: white;
+  }
