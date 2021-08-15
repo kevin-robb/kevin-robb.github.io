@@ -186,5 +186,24 @@ footer {
     margin-bottom: 1cm;
     /* align-items: center;
     justify-content: center; */
-    width: 50%
- }
+    width: 50%;
+}
+
+/* trying to make gallery side-by-side images the same height */
+.container .box {
+    width:75%; /*540px; */
+    margin:12.5%; /*50px;*/
+    display:table;
+}
+.container .box .box-row {
+    display:table-row;
+}
+.container .box .box-cell {
+    display:table-cell;
+    border:0; /*1px solid black;*/
+    width:25%;
+    padding:10px;
+}
+
+
+
