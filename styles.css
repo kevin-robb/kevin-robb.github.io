@@ -191,18 +191,21 @@ footer {
 
 /* trying to make gallery side-by-side images the same height */
 .container .box {
-    width:75%; /*540px; */
-    margin:12.5%; /*50px;*/
+    width:90%; /*540px; */
+    margin:5%; /*50px;*/
     display:table;
+    vertical-align: top;
 }
 .container .box .box-row {
     display:table-row;
+    vertical-align: top;
 }
 .container .box .box-cell {
     display:table-cell;
     border:0; /*1px solid black;*/
     width:25%;
     padding:10px;
+    vertical-align: top;
 }
 
 
