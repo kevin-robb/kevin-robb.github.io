@@ -205,8 +205,5 @@ footer {
     border:0; /*1px solid black;*/
     width:25%;
     padding:10px;
-    vertical-align: top;
+    vertical-align: middle;
 }
-
-
-
