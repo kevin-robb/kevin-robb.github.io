@@ -8,14 +8,16 @@ html{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
+    /* color: white; */
+    color: #022449;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
 }
 
 body {
     /* background: rgb(253, 150, 68); */
-    background: rgb(32,178,170);
+    /* background: rgb(32,178,170); */
+    background: #55BDCA; /* 96FFFF */
 }
 
 li,
@@ -43,7 +45,8 @@ header {
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
-    background: rgb(14, 88, 85);
+    /* background: rgb(14, 88, 85); */
+    background: #022449;
 }
 
 .logo {
@@ -56,6 +59,7 @@ header {
     font-size: 64px;
     text-decoration: none;
     color: rgb(255, 251, 245);
+    /* color: #F27D42; */
 }
 
 .nav__links {
@@ -70,7 +74,8 @@ header {
 
 .nav__links li a {
     transition: all 0.3s ease 0s;
-    background-color: rgb(26, 26, 26, 0);
+    /* background-color: rgb(26, 26, 26, 0); */
+    background-color: #F27D42;
     padding: 4px 15px;
     border: none;
     border-radius: 7px;
@@ -78,7 +83,8 @@ header {
 }
 
 .nav__links li a:hover {
-    background-color: rgb(26, 26, 26, .3);
+    /* background-color: rgb(26, 26, 26, .3); */
+    background-color: #55BDCA;
 }
 
 .vignette {
@@ -125,12 +131,16 @@ header {
 }
 
 .button{
-    margin-top: 4%;
     font-size: 40px;
-    background-color: rgb(3, 33, 43);
+    /* background-color: rgb(3, 33, 43); */
+    background-color: #022449;
     border: none;
     border-radius: 7px;
     cursor: pointer;
+    width: fit-content;
+    display: block;
+    margin:4% auto;
+    padding: 5px 10px;
 }
 
 .image{
@@ -161,6 +171,13 @@ header {
     animation-fill-mode: forwards;
 }
 
+.animate-just-text{
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    margin-top: 1cm;
+}
+
   
 @keyframes fadeInAnimation {
     0% {
@@ -178,7 +195,8 @@ html, body {
 footer {
     /* text-align: center; */
     padding: 3px;
-    background-color: rgb(4, 145, 138);
+    /* background-color: rgb(4, 145, 138); */
+    background: #022449;
     color: white;
 }
 
@@ -207,3 +225,15 @@ footer {
     padding:10px;
     vertical-align: middle;
 }
+.container .box .box-text {
+    display:table-cell;
+    border:0; /*1px solid black;*/
+    width:25%;
+    padding:10px;
+    vertical-align: top;
+}
+
+/* Round corners of images */
+/* img {
+    border-radius: 20%;
+  } */
