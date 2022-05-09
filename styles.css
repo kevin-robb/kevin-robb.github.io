@@ -262,3 +262,17 @@ footer {
 
 /* 
 <h1 class="button"><a onclick=" window.open('','_blank')"></a></h1> */
+
+/* Stuff for horz year lines */
+h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #022449; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ h2 span { 
+     background:#55BDCA; 
+     padding:0 10px; 
+ }
