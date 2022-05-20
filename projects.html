@@ -9,6 +9,8 @@
             p {text-align: center;}
             div {text-align: center;}
         </style>
+        <!-- Add favicon image. -->
+        <link rel="shortcut icon" type="image/ico" href="images/KR_logo.png" id="favicon">
     </head>
 
     <body class="vignette">
@@ -41,7 +43,31 @@
             <div class="container">
                 <div class="box">
                     <h2><span>2022</span></h2>
-                    <!-- ORB_SLAM3 RSN project -->
+                    <!-- Personal EKF-SLAM project -->
+                    <div class="box-project">
+                        <h1>EKF-SLAM Personal Project</h1>
+                        <div class="box-row">
+                            <div class="box-cell box1">
+                                <img src="images/ekf_rand_demo.png" width="100%" alt="" />
+                            </div>
+                            <div class="box-cell box2">
+                                <div>
+                                    <h3> Since I've been learning about the math behind the EKF and landmark-mapping in grad school, I decided to try and implement a fully custom ROS architecture that can generate a map, intelligently produce a trajectory for the vehicle to follow, create measurements for each timestep, and run the noisy commands and landmark detections through an EKF to perform Online SLAM. I also created a plotting node that shows the simulation "live" as the vehicle moves and SLAM is performed.
+                                    <br><br> Now that I've setup the structure, I can also easily swap out the EKF node for another filter; I'm current working on a UKF node and a Particle Filter MCL node.
+                                    </h3>
+                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=7Mf2-PnmN_M','_blank')">Video</a></h1>
+                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/live_ekf_slam','_blank')">Git Repo</a></h1>
+                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/live_ekf_slam/blob/main/docs/EKF_SLAM_Derivation.pdf','_blank')">Derivation</a></h1>
+                                </div>
+                            </div>
+                            <div class="box-cell box3">
+                                <img src="images/ekf_grid_demo.png" width="100%" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <!-- MichelARMgelo project -->
                     <div class="box-project">
                         <h1><i>MichelARMgelo</i> Robot Arm Drawing Project</h1>
                         <div class="box-row">
@@ -73,7 +99,7 @@
                             </div>
                             <div class="box-cell box2">
                                 <div>
-                                    <h3> For my final project in <i>EECE-5554: Robotics Sensing & Navigation</i> at Northeastern University, I implemented the visual SLAM package ORB_SLAM3 to perform several demos with my own data. I've written a fully detailed setup guide on GitHub, and posted many demos to YouTube in a playlist.</h3>
+                                    <h3> For my final project in <i>EECE-5554: Robotics Sensing & Navigation</i> at Northeastern University, I implemented the visual SLAM package ORB_SLAM3 to perform several demos with my own data, including an imageset taken with the camera array on the <i>NUance</i> autonomous car. I've written a fully detailed setup guide on GitHub, and posted many demos to YouTube in a playlist.</h3>
                                     <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/orb_slam_implementation','_blank')">Git Repo</a></h1>
                                     <h1 class="button"><a onclick=" window.open('https://www.youtube.com/playlist?list=PLQp5kRKQrSVYwbofYIjS4bbODDIJR0RMU','_blank')">Demo Videos Playlist</a></a></h1>
                                 </div>
@@ -96,7 +122,9 @@
                             <div class="box-cell box2">
                                 <div class="vertical-center">
                                     <div>
-                                        <h3>This project in <i>EECE-5550: Mobile Robotics</i> at Northeastern University involved writing a ROS codebase for a turtlebot3 to autonomously map a closed environment while searching for all of an unknown number of AprilTags. The end result is a complete map with all tag poses identified. We did this using the Cartographer ROS package and a modified Explore Lite to perform frontier exploration.</h3>
+                                        <h3>This project in <i>EECE-5550: Mobile Robotics</i> at Northeastern University involved writing a ROS codebase for a turtlebot3 to autonomously map a closed environment while searching for all of an unknown number of AprilTags. The end result is a complete map with all tag poses identified. We did this using the Cartographer ROS package and a modified Explore Lite to perform frontier exploration.
+                                        <br><br> We also implemented a particle filter from scratch to do raycasting on the occupancy grid map and perform Monte-Carlo Localization.
+                                        </h3>
                                         <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=ajHBs7toPls','_blank')">Video</a></h1>
                                         <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/bebop-eece5550','_blank')">Git Repo</a></h1>
                                         <h1 class="button"><a onclick=" window.open('docs/EECE_5550_Team_Bebop_Final_Report.pdf','_blank')">Design Report</a></h1>
