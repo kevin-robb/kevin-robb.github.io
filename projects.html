@@ -48,12 +48,12 @@
                         <h1>EKF-SLAM Personal Project</h1>
                         <div class="box-row">
                             <div class="box-cell box1">
-                                <img src="images/ekf_rand_demo.png" width="100%" alt="" />
+                                <img src="images/ekf_igvc1_demo.gif" width="100%" alt="" />
                             </div>
                             <div class="box-cell box2">
                                 <div>
-                                    <h3> Since I've been learning about the math behind the EKF and landmark-mapping in grad school, I decided to try and implement a fully custom ROS architecture that can generate a map, intelligently produce a trajectory for the vehicle to follow, create measurements for each timestep, and run the noisy commands and landmark detections through an EKF to perform Online SLAM. I also created a plotting node that shows the simulation "live" as the vehicle moves and SLAM is performed.
-                                    <br><br> Now that I've setup the structure, I can also easily swap out the EKF node for another filter; I'm current working on a UKF node and a Particle Filter MCL node.
+                                    <h3> Since I've been learning about the math behind the EKF and landmark-mapping in grad school, I decided to try and implement a fully custom ROS architecture including a simple 2D simulator that can generate a map, intelligently produce a trajectory for the vehicle to follow, create measurements for each timestep, and run the noisy commands and landmark detections through an EKF to perform Online SLAM. I also created a plotting node that shows the simulation "live" as the vehicle moves and SLAM is performed. After getting this working, I also implemented a path planning node to perform A* on an occupancy map and navigate it using Pure Pursuit.
+                                    <br><br> Now that I've setup the structure, I can also easily swap out the EKF node for another filter; I'm currently working on a UKF node and a Particle Filter MCL node.
                                     </h3>
                                     <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=7Mf2-PnmN_M','_blank')">Video</a></h1>
                                     <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/live_ekf_slam','_blank')">Git Repo</a></h1>
@@ -61,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="box-cell box3">
-                                <img src="images/ekf_grid_demo.png" width="100%" alt="" />
+                                <img src="images/ekf_grid_demo.gif" width="100%" alt="" />
                             </div>
                         </div>
                     </div>
