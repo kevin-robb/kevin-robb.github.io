@@ -1,74 +1,100 @@
 <html>
-    <head>
-        <link href="styles.css" rel="stylesheet" type="text/css" />
-        <meta charset="UTF-8" />
-        <title>Kevin Robb Designs</title>
-        <!-- Make stuff be centered -->
-        <style> 
-            h3 {text-align: center;}
-            p {text-align: center;}
-            div {text-align: center;}
-        </style>
-        <!-- Add favicon image. -->
-        <link rel="shortcut icon" type="image/ico" href="images/KR_logo.png" id="favicon">
-    </head>
 
-    <body class="vignette">
-        <div id="container">
-            <div id="header" class="animate">
-                <header>
-                    <a href="index.html">
-                    <img
-                        src="images/KR_logo.png"
-                        width="100"
-                        alt="KR"
-                        class="logo"
-                    />
-                    </a>
-                    <div class="logo-text">Kevin Robb Designs</div>
-                    <nav>
-                        <ul class="nav__links">
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
-                    </nav>
-                </header>
-            </div>
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <title>Kevin Robb Designs</title>
+    <!-- Define styles specific to this page. -->
+    <style>
+        h1 {
+            text-align: left;
+            font-size: 50px;
+            font-weight: bolder;
+        }
 
-            <!-- <div id="content" class="animate">
-                <h1 class="main-content fadein">Kevin Robb Designs</h1>
-            </div> -->
+        h2 {
+            text-align: left;
+        }
 
-            <!-- make rows of images be the same height by using a table -->
-            <div class="container">
-                <div class="box">
-                    <div class="box-row">
-                        <div class="box-cell box1">
-                            <img src="images/headshot.jpg" width="100%" alt="" />
+        h3 {
+            text-align: left;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        /* Make images on this page circular. */
+        img {
+            border-radius: 50%;
+        }
+    </style>
+    <!-- Add favicon image. -->
+    <link rel="shortcut icon" type="image/ico" href="images/KR_logo.png" id="favicon">
+    <!-- Add images for social media icons, e.g., github, youtube -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="vignette">
+    <div id="container">
+        <div id="header" class="animate">
+            <header>
+                <a href="index.html">
+                    <img src="images/KR_logo.png" width="100" alt="KR" class="logo" />
+                </a>
+                <div class="logo-text">Kevin Robb Designs</div>
+                <nav>
+                    <ul class="nav__links">
+                        <li><a href="projects.html">Projects</a></li>
+                        <!-- <li><a href="about.html">About</a></li> -->
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a onclick=" window.open('docs/resume.pdf','_blank')">Resume</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <div class="box-row">
+                    <div class="box-cell box1">
+                        <img src="images/headshot.jpg" width="100%" alt="Kevin's professional headshot" />
+                    </div>
+                    <div class="box-cell box2">
+                        <div>
+                            <h1>Kevin Robb</h1>
+                            <h2>Robotics Enthusiast, Student, and Engineer</h2>
+                            <!-- <h2>Aledo, TX → Norman, OK → Boston, MA</h2> -->
+
+                            <a onclick="window.open('https://github.com/kevin-robb','_blank')"
+                                class="fa fa-github fa-3x"></a>
+                            <a onclick="window.open('https://www.linkedin.com/in/kevin-robb-09b275145/','_blank')"
+                                class="fa fa-linkedin fa-3x"></a>
+                            <a onclick="window.open('https://www.youtube.com/channel/UCdxoB6xJBsmmi0iUU0E_yRA','_blank')"
+                                class="fa fa-youtube fa-3x"></a>
+
+                            <!-- <h1 class="button"><a onclick=" window.open('docs/resume_kevinrobb.pdf','_blank')">Resume</a> -->
+
+                            <!-- <h3>I'm a robotics hobbyist, enthusiast, student, and engineer! I'm finishing up the last year of my Robotics M.S. @ NEU and working part-time as a robotics software engineer @ PFF. My main area of experience is mobile robot localization & autonomous behavior, such as path planning & navigation. In my projects over the years, I've implemented complex concepts such as extended & unscented Kalman filters, particle filters, and genetic algorithms from the ground-up. My main career interest is working to expand perception & autonomy for robotic platforms. Nothing is more fun & fulfilling than making robots do cool things!</h3> -->
                         </div>
-                        <div class="box-cell box2">
-                            <div>
-                                <h1>Welcome to my website!</h1>
-                                <h3>Below are some useful links, and the nav bar includes pages with more info and pictures.</h3>
-                                <h1 class="button"><a onclick=" window.open('docs/resume_kevinrobb.pdf','_blank')">Resume</a></h1>
-                                <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb','_blank')">GitHub</a></h1>
-                                <h1 class="button"><a onclick=" window.open('https://www.youtube.com/channel/UCdxoB6xJBsmmi0iUU0E_yRA','_blank')">YouTube</a></h1>
-                                <h1 class="button"><a onclick=" window.open('https://linkedin.com/in/kevin-robb-09b275145/','_blank')">LinkedIn</a></h1>
-                                <!-- <h3>I'm actively searching for a Boston-based Summer-Fall 2022 internship/co-op in the fields of robotics, software engineering, and/or embedded systems.</h3> -->
-                            </div>
-                        </div>
-                        <div class="box-cell box3">
-                            <img src="images/robotfloor.jpg" width="100%" alt="" />
-                        </div>
+                    </div>
+                    <div class="box-cell box3">
+                        <img src="images/robotfloor.jpg" width="100%"
+                            alt="Kevin laying on the lab floor surrounded by small robots" />
                     </div>
                 </div>
             </div>
-            <!--  -->
         </div>
-    </body>
+        <!--  -->
+    </div>
+</body>
 
-    <footer>
-        <p>Kevin Robb Designs</p>
-    </footer> 
+<footer>
+    <p>Kevin Robb Designs</p>
+</footer>
+
 </html>

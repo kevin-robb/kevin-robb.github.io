@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap");
 
-html{
+html {
     overflow: scroll;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 * {
@@ -17,7 +19,10 @@ html{
 body {
     /* background: rgb(253, 150, 68); */
     /* background: rgb(32,178,170); */
-    background: #55BDCA; /* 96FFFF */
+    background: #55BDCA;
+    /* 96FFFF */
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 li,
@@ -88,18 +93,19 @@ header {
 }
 
 .vignette {
-    position:relative;
+    position: relative;
     top: 0;
     left: 0;
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.2) inset;
 }
 
-.image-container{
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.image{
+
+.image {
     padding: 5% 20;
     padding-bottom: 70px;
 }
@@ -130,7 +136,7 @@ header {
     cursor: default;
 }
 
-.button{
+.button {
     font-size: 40px;
     /* background-color: rgb(3, 33, 43); */
     /* background-color: #022449; */
@@ -140,11 +146,11 @@ header {
     cursor: pointer;
     width: fit-content;
     display: inline-block;
-    margin:2% auto;
+    margin: 2% auto;
     padding: 5px 10px;
 }
 
-.image{
+.image {
     /* margin-top: 50px; */
     margin-top: 10px;
 }
@@ -166,31 +172,28 @@ header {
     text-align: center;
 }
 
-.animate{
+.animate {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-.animate-just-text{
+.animate-just-text {
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     margin-top: 1cm;
 }
 
-  
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
-     }
-}
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+    }
 }
 
 footer {
@@ -210,35 +213,37 @@ footer {
 
 /* trying to make gallery side-by-side images the same height */
 .container .box {
-    width:90%; /*540px; */
-    margin:5%; /*50px;*/
+    width: 90%;
+    /*540px; */
+    margin: 5%;
+    /*50px;*/
     /* display:table; */
     vertical-align: top;
     margin-bottom: 1cm;
 }
+
 .container .box .box-row {
-    display:table-row;
-    vertical-align: top;
-}
-.container .box .box-cell {
-    display:table-cell;
-    border:0; /*1px solid black;*/
-    width:25%;
-    padding:10px;
-    vertical-align: middle;
-}
-.container .box .box-text {
-    display:table-cell;
-    border:0; /*1px solid black;*/
-    width:25%;
-    padding:10px;
+    display: table-row;
     vertical-align: top;
 }
 
-/* Round corners of images */
-/* img {
-    border-radius: 20%;
-  } */
+.container .box .box-cell {
+    display: table-cell;
+    border: 0;
+    /*1px solid black;*/
+    width: 25%;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.container .box .box-text {
+    display: table-cell;
+    border: 0;
+    /*1px solid black;*/
+    width: 25%;
+    padding: 10px;
+    vertical-align: top;
+}
 
 /* Project sections with background and such */
 /* .container .box .box-project .box-row-project {
@@ -260,19 +265,35 @@ footer {
     /* border-spacing:0 5px; */
 }
 
-/* 
-<h1 class="button"><a onclick=" window.open('','_blank')"></a></h1> */
+/* Social Media icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    /* Align buttons to left and slightly down */
+    transform: translateX(-150%) translateY(20%);
+}
 
-/* Stuff for horz year lines */
-h2 {
-    width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #022449; 
-    line-height: 0.1em;
-    margin: 10px 0 20px; 
- } 
- 
- h2 span { 
-     background:#55BDCA; 
-     padding:0 10px; 
- }
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: #171515;
+    color: white;
+}
