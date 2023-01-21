@@ -18,7 +18,6 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* color: white; */
     color: #022449;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -180,7 +179,7 @@ footer {
     vertical-align: middle;
 }
 
-/* Social Media icons */
+/* "Font Awesome" icons */
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -190,8 +189,6 @@ footer {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
-    /* Align buttons to left and slightly down */
-    transform: translateX(-100%) translateY(20%);
 }
 
 .fa:hover {
@@ -216,4 +213,13 @@ footer {
 .fa-envelope {
     background: #022449;
     color: white;
+}
+
+/* Class for a div wrapping some fa icons to left-align them */
+.left-align-fa-section {
+    text-align: left;
+    width: 100%;
+
+    /* Give some leeway above the icons */
+    margin-top: 1vh;
 }
