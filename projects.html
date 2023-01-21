@@ -1,404 +1,550 @@
 <html>
-    <head>
-        <link href="styles.css" rel="stylesheet" type="text/css" />
-        <meta charset="UTF-8" />
-        <title>Projects</title>
-        <!-- Make stuff be centered -->
-        <style> 
-            h3 {text-align: center;}
-            /* h2 is used for horz year lines */
-            h2 {
-                width: 100%; 
-                text-align: center; 
-                border-bottom: 1px solid #022449; 
-                line-height: 0.1em;
-                margin: 10px 0 20px; 
-            } 
-            
-            h2 span { 
-                background:#55BDCA; 
-                padding:0 10px; 
-            }
-            p {text-align: center;}
-            div {text-align: center;}
-        </style>
-        <!-- Add favicon image. -->
-        <link rel="shortcut icon" type="image/ico" href="images/KR_logo.png" id="favicon">
-    </head>
 
-    <body class="vignette">
-        <div id="container">
-            <div id="header" class="animate">
-                <header>
-                    <a href="index.html">
-                        <img src="images/KR_logo.png" width="100" alt="KR" class="logo" />
-                    </a>
-                    <div class="logo-text">Kevin Robb Designs</div>
-                    <nav>
-                        <ul class="nav__links">
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
-                    </nav>
-                </header>
-            </div>
-            <div id="content" class="animate-just-text">
-                <!-- <img src="Images/grapple.png" width="2000" alt="logo" /> -->
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <title>Projects</title>
+    <!-- Make stuff be centered -->
+    <style>
+        h3 {
+            text-align: center;
+        }
+
+        /* h2 is used for horz year lines */
+        h2.year-line {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #022449;
+            line-height: 0.1em;
+            margin: 10px 0 20px;
+
+            /* Give some leeway before the line */
+            margin-top: 1cm;
+        }
+
+        /* add a new background behind text to prevent looking like strikethrough */
+        h2 span {
+            background: #55BDCA;
+            padding: 0 10px;
+        }
+
+        /* Add background to container section to use for projects */
+        .container-section {
+            background-color: #96FFFF;
+            border-radius: 25px;
+        }
+    </style>
+    <!-- Add favicon image. -->
+    <link rel="shortcut icon" type="image/ico" href="images/KR_logo.png" id="favicon">
+</head>
+
+<body class="vignette">
+    <div id="main-container">
+        <header>
+            <a href="index.html">
+                <img src="images/KR_logo.png" width="100" alt="KR" class="logo" />
+            </a>
+            <div class="logo-text">Kevin Robb Designs</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a onclick=" window.open('docs/resume.pdf','_blank')">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="just-text">
+            <!-- <img src="Images/grapple.png" width="2000" alt="logo" /> -->
+            <br>
+            <h1 class="">I've been making robots and software projects for a long time!
                 <br>
-                <h1 class="">I've been making robots and software projects for a long time!
-                    <br>
-                    Some of these are featured below.
-                </h1>
-            </div>
-
-            <!-- make rows of images be the same height by using a table -->
-            <div class="container">
-                <div class="box">
-                    <h2><span>2022</span></h2>
-                    <!-- Personal EKF-SLAM project -->
-                    <div class="box-project">
-                        <h1>EKF-SLAM Personal Project</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/ekf_igvc1_demo.gif" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3> After gaining a very in-depth understanding of the EKF-SLAM algorithm in grad school, I spent a few weeks creating an entire 2D simulator using ROS Noetic. I implemented nodes for generating noisy measurements, doing trajectory planning, executing commands in the simulator, and plotting everything live. After deriving the functions to perform online landmark-based SLAM with an EKF, I was able to slot this in as another ROS node. I wrote several nodes that can be swapped into this role, including UKF and particle filter localization.
-                                    </h3>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=7Mf2-PnmN_M','_blank')">Video</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/live_ekf_slam','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/live_ekf_slam/blob/main/docs/EKF_SLAM_Derivation.pdf','_blank')">Derivation</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/ekf_grid_demo.gif" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- MichelARMgelo project -->
-                    <div class="box-project">
-                        <h1><i>MichelARMgelo</i> Robot Arm Drawing Project</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/MichelARMgelo_dome_drawing.png" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3> For a final project in <i>CS-5335: Robotic Science & Systems</i> at Northeastern University, my group used an Interbotix PincherX 150 robot arm to draw with a marker on a variety of canvases. This entailed designing a custom end-effector, deriving equations to generate trajectories on flat, concave, and convex surfaces, and creating a software architecture to plan and execute them.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=hnT60kQ3MnY','_blank')">Video</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/jtukpah/MichelARMgelo','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/cs5335_slides.pdf','_blank')">Slides</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/cs5335_paper.pdf','_blank')">Written Report</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/Team_MichelARMgelo.jpg" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- ORB_SLAM3 RSN project -->
-                    <div class="box-project">
-                        <h1><i>ORB_SLAM3</i> Implementation</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/ORB_SLAM3_bedroom.png" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3> For my final project in <i>EECE-5554: Robotics Sensing & Navigation</i> at Northeastern University, I implemented the visual SLAM package ORB_SLAM3 to perform several demos with my own data, including an imageset taken with the camera array on the <i>NUance</i> autonomous car. I've written a fully detailed setup guide on GitHub, and posted many demos to YouTube in a playlist.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/orb_slam_implementation','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/playlist?list=PLQp5kRKQrSVYwbofYIjS4bbODDIJR0RMU','_blank')">Demo Videos Playlist</a></a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/ORB_SLAM3_isec_ramp.png" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h2><span>2021</span></h2>
-                    <!-- Team Bebop Mobile Robotics Project -->
-                    <div class="box-project">
-                        <h1>Turtlebot3 Exploration Project</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/bebop_env.jpeg" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div class="vertical-center">
-                                    <div>
-                                        <h3>This project in <i>EECE-5550: Mobile Robotics</i> at Northeastern University involved writing a ROS codebase for a turtlebot3 to autonomously map a closed environment while searching for all of an unknown number of AprilTags. The end result is a complete map with all tag poses identified. We did this using the Cartographer ROS package and a modified Explore Lite to perform frontier exploration.
-                                        <br><br> We also implemented a particle filter from scratch to do raycasting on the occupancy grid map and perform Monte-Carlo Localization.
-                                        </h3>
-                                        <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=ajHBs7toPls','_blank')">Video</a></h1>
-                                        <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/bebop-eece5550','_blank')">Git Repo</a></h1>
-                                        <h1 class="button"><a onclick=" window.open('docs/eece5550_paper.pdf','_blank')">Design Report</a></h1>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/bebop_team.jpg" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- IGVC -->
-                    <div class="box-project">
-                        <h1><i>Intelligent Ground Vehicle Competition</i>, Auto-Nav Challenge</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/aw_open.JPG" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>The <i>Aluminum Whale</i> is essentially a small self-driving car, which must autonomously detect lanes and obstacles to navigate through a difficult course. I led the mechanical design and build of the chassis, with a focus on modularity and speed of assembly/disassembly for transport to and from the event. I also designed the localization system which included a custom Extended Kalman Filter implementation. We won first place in our event, Auto-Nav, as well as Rookie of the Year and 2nd place for the overall Grand Award. I served as captain of the team.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=MEVc-XccGtU','_blank')">Video</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/SoonerRobotics/igvc_software_2021','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('http://ouccoe100.blogspot.com/2021/07/ou-team-wins-first-in-robotics.html','_blank')">Media Release</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/igvc_design_report.pdf','_blank')">Design Report</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/igvc_rules.pdf','_blank')">IGVC Rules</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/SCR_igvc_team.jpeg" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- Senior Design Project -->
-                    <div class="box-project">
-                        <h1>Engineering Physics Senior Design Project</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/kf_output_102.png" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3> This individual research project constituted my capstone for my B.S. in engineering physics at the University of Oklahoma. I implemented a Kalman Filter to estimate the state of a simulated mobile robot, then used evolutionary computation methods to optimize its parameters, thus in turn optimizing localization effectiveness. This allowed a basic KF with a constant velocity model to track position and yaw, and work in this nonlinear scenario about as well as a manually tuned EKF.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/capstone-kf-ml','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/ephys_capstone_paper.pdf','_blank')">Paper</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/ec_output.png" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- Fantasy Dice -->
-                    <div class="box-project">
-                        <h1><i>Fantasy Dice</i></h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/dice_real.jpg" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>In 24 hours at <i>Hacklahoma</i> 2021, my team made <i>Fantasy Dice</i>, an all-in-one character sheet importer, dice roller, and video streamer for playing Dungeons & Dragons remotely. We won 2nd place overall, as well as Best Use of Google Cloud for our implementation of their vision API.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/SarahBrown/fantasy-dice','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://devpost.com/software/fantasy-dice','_blank')">Devpost</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/dice_CV.jpg" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h2><span>2020</span></h2>
-                    <!-- SCR SWC -->
-                    <div class="box-project">
-                        <h1><i>SCR Software Challenge</i></h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/SWC_sim_obstacles.png" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>This was an in-house competition that my team in Sooner Competitive Robotics ran in simulation for Summer 2020, since our in-person competitions were cancelled due to Covid-19. It was an individual challenge in which each person implemented the entire ROS software base from scratch to complete the task of planning a maximally efficient path from the start to goal in a randomized environment. Score can be increased with a faster runtime and by raising difficulty settings such as obstacle density and sensor noise. I created a full architecture to perform localization, navigation, and reactive control to complete randomly generated courses quickly and autonomously on the highest noise settings.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=jc3avqMwt74','_blank')">Video</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/SCR-SWC-20','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/SoonerRobotics/SCR-SWC-20','_blank')">Simulator</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/SWC_sim.png" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- NRC -->
-                    <div class="box-project">
-                        <h1><i>National Robotics Challenge</i>, Autonomous Vehicle Competition</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/NRC_bot.jpg" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>My team built a small autonomous racing robot that runs on a course for which the map is known and static. I created the navigation and path planning systems that use a goal trajectory and localization info to run Pure Pursuit with a PID to keep the robot on path. Due to Covid-19, the competition was cancelled :(</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=LrihKM_YvsQ','_blank')">Video</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/SoonerRobotics/nrc_software','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/nrc_rules.pdf','_blank')">NRC-AVC Rules</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://www.thenrc.org/','_blank')">About NRC</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/NRC_sim.png" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- Stemmy -->
-                    <div class="box-project">
-                        <h1><i>Stemmy</i></h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/stemmy.png" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>In 24 hours at <i>Hacklahoma</i> 2020, my team made <i>Stemmy</i>, a web-app lobby-based math game. The theme was STEM education, so we made something classrooms could use to play and learn together in a computer lab. I designed the back-end logic for handling lobbies, leaderboards, and gameplay in Python with socket.io. We won 3rd place overall!</h3>
-                                    <h1 class="button"><a onclick=" window.open('http://github.com/noahzemlin/stemmy-online','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('http://devpost.com/software/stemmy','_blank')">Devpost</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/stemmy_presentation.JPG" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h2><span>2019</span></h2>
-                    <!-- Mercury -->
-                    <div class="box-project">
-                        <h1><i>Mercury Remote Robot Challenge</i></h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/merc_bot.jpg" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>This competition mimicks a far-away robot being teleoperated by a driver who cannot physically see or interact with the vehicle. The drive team was more than 80 miles away while running the course, seeing only through the robot's onboard camera and sensors, and sending control commands back over the internet. All mechanical components were 3D-printed, and the control software was designed to minimize latency. We had the second-highest score among all teams in attendance.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/watch?v=nNAHY5z5GDQ','_blank')">Video</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/mercury_rules.pdf','_blank')">Mercury Rules</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/mercury_field.pdf','_blank')">Field Specifications</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/merc_team.jpg" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- Bee Clicker -->
-                    <div class="box-project">
-                        <h1><i>Bee Clicker</i></h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/bee.png" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3><i>Bee Clicker</i> is a web-game that makes you care about the bees. <i>Hacklahoma</i> 2019, my first hackathon, had the theme "Save the Bees." I made all the artwork for the site using Aseprite. We won Best Domain and were a Top Ten Hack at the event. The game is still playable online!
-                                        <h1 class="button"><a onclick=" window.open('https://beeclick.org/','_blank')">Play it!</a></h1>
-                                        <h1 class="button"><a onclick=" window.open('http://github.com/noahzemlin/beeclick.org/','_blank')">Git Repo</a></h1>
-                                        <h1 class="button"><a onclick=" window.open('http://devpost.com/software/bee-clicker','_blank')">Devpost</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/beeclick_honeycomb.png" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <!-- Honors Thesis -->
-                    <div class="box-project">
-                        <h1><i>On Reinforcement Learning, Nurturing, and the Evolution of Risk Neutrality</i></h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/FYRE_symposium.jpg" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>This research project involved creating a full Java codebase to simulate many generations of agents making choices and evolving with a custom genetic algorithm. My goal was to explore the effect of nurturing and environmental changes on the evolution of risk adversity (or lack thereof). I found that the addition of nurturing made it far more likely that a population would develop risk-neutrality, while an individualistic species would almost certainly adopt extreme risk-aversion.<br>I did this project as my Honors Thesis at the University of Oklahoma. My paper concerning this project was published in the OU Honors College research journal (THURJ) in 2019, and it earned me the Undergraduate Libraries Research Award 1st place scholarship.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb/real-lab-risky-RL','_blank')">Git Repo</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/URLA_paper.pdf','_blank')">Paper</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/FYRE_poster.pdf','_blank')">Poster</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/rl_evolution_plot.jpg" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h2><span>2018</span></h2>
-                    <!-- Sumobot -->
-                    <div class="box-project">
-                        <h1><i>Robogames' Autonomous 3kg Sumobot</i></h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/sumobot_comp.jpg" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>I was the freshman team captain for this competition, ensuring objectives were met and organizing logistics such as our travel to the event in California. We created a small robot which used a state machine to switch modes between defending itself and attempting to push the opponent out of the sumo ring. We earned 5th place at the international competition.</h3>
-                                    <h1 class="button"><a onclick=" window.open('http://robogames.net/rules/all-sumo.php','_blank')">Sumo Rules</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/sumobot_frame.jpeg" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <h2><span>2017</span></h2>
-                    <!-- FTC -->
-                    <div class="box-project">
-                        <h1><i>FIRST Tech Challenge</i> Team 6566</h1>
-                        <div class="box-row">
-                            <div class="box-cell box1">
-                                <img src="images/ftc6566_bot.jpg" width="100%" alt="" />
-                            </div>
-                            <div class="box-cell box2">
-                                <div>
-                                    <h3>The team that started it all; I participated in the <i>FIRST Tech Challenge</i> all through high school, and it was my favorite thing I had ever done. In my four years, I led team FTC 6566 Circuit Breakers from losing at qualifiers in 2013 to making the World Championship my senior year, 2017. I've never been prouder of a project than this robot built from literal scrap parts and a heck of a lot of work; it had an incredible influence on my journey to focus my career on robotics.</h3>
-                                    <h1 class="button"><a onclick=" window.open('https://www.firstinspires.org/robotics/ftc','_blank')">About FIRST</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/6566_design_notebook.pdf','_blank')">Design Notebook</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('docs/6566_engr_notebook.pdf','_blank')">Engineering Notebook</a></h1>
-                                </div>
-                            </div>
-                            <div class="box-cell box3">
-                                <img src="images/ftc6566_worlds.JPG" width="100%" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--  -->
+                Some of these are featured below.
+            </h1>
         </div>
-    </body>
 
-    <footer>
-        <p>Kevin Robb Designs</p>
-    </footer> 
+        <h2 class="year-line"><span>2022</span></h2>
+
+        <!-- Personal EKF-SLAM project -->
+        <div class="container-section">
+            <h1>EKF-SLAM Personal Project</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/ekf_igvc1_demo.gif" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3> After gaining a very in-depth understanding of the EKF-SLAM algorithm in grad
+                            school, I spent a few weeks creating an entire 2D simulator using ROS Noetic. I
+                            implemented nodes for generating noisy measurements, doing trajectory planning,
+                            executing commands in the simulator, and plotting everything live. After deriving
+                            the functions to perform online landmark-based SLAM with an EKF, I was able to slot
+                            this in as another ROS node. I wrote several nodes that can be swapped into this
+                            role, including UKF and particle filter localization.
+                        </h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.youtube.com/watch?v=7Mf2-PnmN_M','_blank')">Video</a>
+                        </h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/kevin-robb/live_ekf_slam','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/kevin-robb/live_ekf_slam/blob/main/docs/EKF_SLAM_Derivation.pdf','_blank')">Derivation</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/ekf_grid_demo.gif" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- MichelARMgelo project -->
+        <div class="container-section">
+            <h1><i>MichelARMgelo</i> Robot Arm Drawing Project</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/MichelARMgelo_dome_drawing.png" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3> For a final project in <i>CS-5335: Robotic Science & Systems</i> at Northeastern
+                            University, my group used an Interbotix PincherX 150 robot arm to draw with a marker
+                            on a variety of canvases. This entailed designing a custom end-effector, deriving
+                            equations to generate trajectories on flat, concave, and convex surfaces, and
+                            creating a software architecture to plan and execute them.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.youtube.com/watch?v=hnT60kQ3MnY','_blank')">Video</a>
+                        </h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/jtukpah/MichelARMgelo','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/cs5335_slides.pdf','_blank')">Slides</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/cs5335_paper.pdf','_blank')">Written
+                                Report</a></h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/Team_MichelARMgelo.jpg" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- ORB_SLAM3 RSN project -->
+        <div class="container-section">
+            <h1><i>ORB_SLAM3</i> Implementation</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/ORB_SLAM3_bedroom.png" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3> For my final project in <i>EECE-5554: Robotics Sensing & Navigation</i> at
+                            Northeastern University, I implemented the visual SLAM package ORB_SLAM3 to perform
+                            several demos with my own data, including an imageset taken with the camera array on
+                            the <i>NUance</i> autonomous car. I've written a fully detailed setup guide on
+                            GitHub, and posted many demos to YouTube in a playlist.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/kevin-robb/orb_slam_implementation','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.youtube.com/playlist?list=PLQp5kRKQrSVYwbofYIjS4bbODDIJR0RMU','_blank')">Demo
+                                Videos Playlist</a></a></h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/ORB_SLAM3_isec_ramp.png" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <h2 class="year-line"><span>2021</span></h2>
+
+        <!-- Team Bebop Mobile Robotics Project -->
+        <div class="container-section">
+            <h1>Turtlebot3 Exploration Project</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/bebop_env.jpeg" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div class="vertical-center">
+                        <div>
+                            <h3>This project in <i>EECE-5550: Mobile Robotics</i> at Northeastern University
+                                involved writing a ROS codebase for a turtlebot3 to autonomously map a closed
+                                environment while searching for all of an unknown number of AprilTags. The end
+                                result is a complete map with all tag poses identified. We did this using the
+                                Cartographer ROS package and a modified Explore Lite to perform frontier
+                                exploration.
+                                <br><br> We also implemented a particle filter from scratch to do raycasting on
+                                the occupancy grid map and perform Monte-Carlo Localization.
+                            </h3>
+                            <h1 class="button"><a
+                                    onclick=" window.open('https://www.youtube.com/watch?v=ajHBs7toPls','_blank')">Video</a>
+                            </h1>
+                            <h1 class="button"><a
+                                    onclick=" window.open('https://github.com/kevin-robb/bebop-eece5550','_blank')">Git
+                                    Repo</a></h1>
+                            <h1 class="button"><a onclick=" window.open('docs/eece5550_paper.pdf','_blank')">Design
+                                    Report</a>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/bebop_team.jpg" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- IGVC -->
+        <div class="container-section">
+            <h1><i>Intelligent Ground Vehicle Competition</i>, Auto-Nav Challenge</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/aw_open.JPG" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>The <i>Aluminum Whale</i> is essentially a small self-driving car, which must
+                            autonomously detect lanes and obstacles to navigate through a difficult course. I
+                            led the mechanical design and build of the chassis, with a focus on modularity and
+                            speed of assembly/disassembly for transport to and from the event. I also designed
+                            the localization system which included a custom Extended Kalman Filter
+                            implementation. We won first place in our event, Auto-Nav, as well as Rookie of the
+                            Year and 2nd place for the overall Grand Award. I served as captain of the team.
+                        </h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.youtube.com/watch?v=MEVc-XccGtU','_blank')">Video</a>
+                        </h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/SoonerRobotics/igvc_software_2021','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('http://ouccoe100.blogspot.com/2021/07/ou-team-wins-first-in-robotics.html','_blank')">Media
+                                Release</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/igvc_design_report.pdf','_blank')">Design
+                                Report</a>
+                        </h1>
+                        <h1 class="button"><a onclick=" window.open('docs/igvc_rules.pdf','_blank')">IGVC
+                                Rules</a></h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/SCR_igvc_team.jpeg" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Senior Design Project -->
+        <div class="container-section">
+            <h1>Engineering Physics Senior Design Project</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/kf_output_102.png" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3> This individual research project constituted my capstone for my B.S. in engineering
+                            physics at the University of Oklahoma. I implemented a Kalman Filter to estimate the
+                            state of a simulated mobile robot, then used evolutionary computation methods to
+                            optimize its parameters, thus in turn optimizing localization effectiveness. This
+                            allowed a basic KF with a constant velocity model to track position and yaw, and
+                            work in this nonlinear scenario about as well as a manually tuned EKF.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/kevin-robb/capstone-kf-ml','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/ephys_capstone_paper.pdf','_blank')">Paper</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/ec_output.png" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Fantasy Dice -->
+        <div class="container-section">
+            <h1><i>Fantasy Dice</i></h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/dice_real.jpg" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>In 24 hours at <i>Hacklahoma</i> 2021, my team made <i>Fantasy Dice</i>, an
+                            all-in-one character sheet importer, dice roller, and video streamer for playing
+                            Dungeons & Dragons remotely. We won 2nd place overall, as well as Best Use of Google
+                            Cloud for our implementation of their vision API.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/SarahBrown/fantasy-dice','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://devpost.com/software/fantasy-dice','_blank')">Devpost</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/dice_CV.jpg" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <h2 class="year-line"><span>2020</span></h2>
+
+        <!-- SCR SWC -->
+        <div class="container-section">
+            <h1><i>SCR Software Challenge</i></h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/SWC_sim_obstacles.png" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>This was an in-house competition that my team in Sooner Competitive Robotics ran in
+                            simulation for Summer 2020, since our in-person competitions were cancelled due to
+                            Covid-19. It was an individual challenge in which each person implemented the entire
+                            ROS software base from scratch to complete the task of planning a maximally
+                            efficient path from the start to goal in a randomized environment. Score can be
+                            increased with a faster runtime and by raising difficulty settings such as obstacle
+                            density and sensor noise. I created a full architecture to perform localization,
+                            navigation, and reactive control to complete randomly generated courses quickly and
+                            autonomously on the highest noise settings.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.youtube.com/watch?v=jc3avqMwt74','_blank')">Video</a>
+                        </h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/kevin-robb/SCR-SWC-20','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/SoonerRobotics/SCR-SWC-20','_blank')">Simulator</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/SWC_sim.png" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- NRC -->
+        <div class="container-section">
+            <h1><i>National Robotics Challenge</i>, Autonomous Vehicle Competition</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/NRC_bot.jpg" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>My team built a small autonomous racing robot that runs on a course for which the
+                            map is known and static. I created the navigation and path planning systems that use
+                            a goal trajectory and localization info to run Pure Pursuit with a PID to keep the
+                            robot on path. Due to Covid-19, the competition was cancelled :(</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.youtube.com/watch?v=LrihKM_YvsQ','_blank')">Video</a>
+                        </h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/SoonerRobotics/nrc_software','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/nrc_rules.pdf','_blank')">NRC-AVC
+                                Rules</a></h1>
+                        <h1 class="button"><a onclick=" window.open('https://www.thenrc.org/','_blank')">About
+                                NRC</a></h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/NRC_sim.png" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Stemmy -->
+        <div class="container-section">
+            <h1><i>Stemmy</i></h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/stemmy.png" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>In 24 hours at <i>Hacklahoma</i> 2020, my team made <i>Stemmy</i>, a web-app
+                            lobby-based math game. The theme was STEM education, so we made something classrooms
+                            could use to play and learn together in a computer lab. I designed the back-end
+                            logic for handling lobbies, leaderboards, and gameplay in Python with socket.io. We
+                            won 3rd place overall!</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('http://github.com/noahzemlin/stemmy-online','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a
+                                onclick=" window.open('http://devpost.com/software/stemmy','_blank')">Devpost</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/stemmy_presentation.JPG" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <h2 class="year-line"><span>2019</span></h2>
+
+        <!-- Mercury -->
+        <div class="container-section">
+            <h1><i>Mercury Remote Robot Challenge</i></h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/merc_bot.jpg" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>This competition mimicks a far-away robot being teleoperated by a driver who cannot
+                            physically see or interact with the vehicle. The drive team was more than 80 miles
+                            away while running the course, seeing only through the robot's onboard camera and
+                            sensors, and sending control commands back over the internet. All mechanical
+                            components were 3D-printed, and the control software was designed to minimize
+                            latency. We had the second-highest score among all teams in attendance.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.youtube.com/watch?v=nNAHY5z5GDQ','_blank')">Video</a>
+                        </h1>
+                        <h1 class="button"><a onclick=" window.open('docs/mercury_rules.pdf','_blank')">Mercury
+                                Rules</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/mercury_field.pdf','_blank')">Field
+                                Specifications</a></h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/merc_team.jpg" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Bee Clicker -->
+        <div class="container-section">
+            <h1><i>Bee Clicker</i></h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/bee.png" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3><i>Bee Clicker</i> is a web-game that makes you care about the bees.
+                            <i>Hacklahoma</i> 2019, my first hackathon, had the theme "Save the Bees." I made
+                            all the artwork for the site using Aseprite. We won Best Domain and were a Top Ten
+                            Hack at the event. The game is still playable online!
+                            <h1 class="button"><a onclick=" window.open('https://beeclick.org/','_blank')">Play
+                                    it!</a></h1>
+                            <h1 class="button"><a
+                                    onclick=" window.open('http://github.com/noahzemlin/beeclick.org/','_blank')">Git
+                                    Repo</a></h1>
+                            <h1 class="button"><a
+                                    onclick=" window.open('http://devpost.com/software/bee-clicker','_blank')">Devpost</a>
+                            </h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/beeclick_honeycomb.png" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Honors Thesis -->
+        <div class="container-section">
+            <h1><i>On Reinforcement Learning, Nurturing, and the Evolution of Risk Neutrality</i></h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/FYRE_symposium.jpg" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>This research project involved creating a full Java codebase to simulate many
+                            generations of agents making choices and evolving with a custom genetic algorithm.
+                            My goal was to explore the effect of nurturing and environmental changes on the
+                            evolution of risk adversity (or lack thereof). I found that the addition of
+                            nurturing made it far more likely that a population would develop risk-neutrality,
+                            while an individualistic species would almost certainly adopt extreme
+                            risk-aversion.<br>I did this project as my Honors Thesis at the University of
+                            Oklahoma. My paper concerning this project was published in the OU Honors College
+                            research journal (THURJ) in 2019, and it earned me the Undergraduate Libraries
+                            Research Award 1st place scholarship.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://github.com/kevin-robb/real-lab-risky-RL','_blank')">Git
+                                Repo</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/URLA_paper.pdf','_blank')">Paper</a>
+                        </h1>
+                        <h1 class="button"><a onclick=" window.open('docs/FYRE_poster.pdf','_blank')">Poster</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/rl_evolution_plot.jpg" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <h2 class="year-line"><span>2018</span></h2>
+
+        <!-- Sumobot -->
+        <div class="container-section">
+            <h1><i>Robogames' Autonomous 3kg Sumobot</i></h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/sumobot_comp.jpg" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>I was the freshman team captain for this competition, ensuring objectives were met
+                            and organizing logistics such as our travel to the event in California. We created a
+                            small robot which used a state machine to switch modes between defending itself and
+                            attempting to push the opponent out of the sumo ring. We earned 5th place at the
+                            international competition.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('http://robogames.net/rules/all-sumo.php','_blank')">Sumo
+                                Rules</a></h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/sumobot_frame.jpeg" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <h2 class="year-line"><span>2017</span></h2>
+        
+        <!-- FTC -->
+        <div class="container-section">
+            <h1><i>FIRST Tech Challenge</i> Team 6566</h1>
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/ftc6566_bot.jpg" width="100%" alt="" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h3>The team that started it all; I participated in the <i>FIRST Tech Challenge</i> all
+                            through high school, and it was my favorite thing I had ever done. In my four years,
+                            I led team FTC 6566 Circuit Breakers from losing at qualifiers in 2013 to making the
+                            World Championship my senior year, 2017. I've never been prouder of a project than
+                            this robot built from literal scrap parts and a heck of a lot of work; it had an
+                            incredible influence on my journey to focus my career on robotics.</h3>
+                        <h1 class="button"><a
+                                onclick=" window.open('https://www.firstinspires.org/robotics/ftc','_blank')">About
+                                FIRST</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/6566_design_notebook.pdf','_blank')">Design
+                                Notebook</a></h1>
+                        <h1 class="button"><a onclick=" window.open('docs/6566_engr_notebook.pdf','_blank')">Engineering
+                                Notebook</a></h1>
+                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/ftc6566_worlds.JPG" width="100%" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<footer>
+    <p>Kevin Robb Designs</p>
+</footer>
+
 </html>

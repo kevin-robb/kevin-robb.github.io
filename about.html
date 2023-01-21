@@ -1,80 +1,109 @@
 <html>
-    <head>
-        <link href="styles.css" rel="stylesheet" type="text/css" />
-        <meta charset="UTF-8" />
-        <title>About Me</title>
-        <!-- Make stuff be centered -->
-        <style> 
-            h1 {text-align: left;}
-            h2 {text-align: center;}
-            h3 {text-align: left;}
-            p {text-align: center;}
-            div {text-align: center;}
-        </style>
-        <!-- Add favicon image. -->
-        <link rel="shortcut icon" type="image/ico" href="images/KR_logo.png" id="favicon">
-    </head>
 
-    <body class="vignette">
-        <div id="container">
-            <div id="header" class="animate">
-                <header>
-                    <a href="index.html">
-                    <img
-                        src="images/KR_logo.png"
-                        width="100"
-                        alt="KR"
-                        class="logo"
-                    />
-                    </a>
-                    <div class="logo-text">Kevin Robb Designs</div>
-                    <nav>
-                        <ul class="nav__links">
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                        </ul>
-                    </nav>
-                </header>
-            </div>
+<head>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <title>About Me</title>
+    <!-- Make stuff be centered -->
+    <style>
+        h1 {
+            text-align: left;
+        }
 
-            <!-- make rows of images be the same height by using a table -->
-            <div class="container">
-                <div class="box">
-                    <div class="box-row">
-                        <div class="box-cell box1">
-                            <img src="images/tour_guide_cropped.jpg" width="100%" alt="" />
-                        </div>
-                        <div class="box-text box2">
-                            <div>
-                                <h1>I'm Kevin!</h1> <br>
-                                <h3>
-                                    Born and raised in Fort Worth, TX, I earned degrees in Engineering Physics and Mathematics at the University of Oklahoma, and am a current M.S. Robotics candidate at Northeastern University in Boston, MA. I'm also working at Piaggio Fast Forward as a robotics software engineer! My expected final graduation is December 2023.
-                                    <br><br>
-                                    My primary areas of interest in robotics are state estimation and navigation, and I have experience using ROS and Kalman filtering to perform mobile robot localization. I'm also skilled in machine learning, and have specialized in evolutionary computation for my largest research projects. 
-                                    I'm actively working to deepen and expand my skillset to more areas of robotics software, including EKF-SLAM, trajectory planning, and model predictive control.
-                                    <br><br>
-                                    My non-technical hobbies include playing soccer, tennis, and dungeons & dragons. I'm an artist and enjoy penwork and digital painting. I'm also passionate about helping people learn! I loved working as a campus tour guide during my time at OU, and have spent most of my life involved with STEM education projects. I try to make all my projects open source and available for folks to learn from, so if you have a question about anything I've done, just ask!
-                                    <br><br>
-                                    If you'd like to contact me, I can be best reached by email.
-                                    <!-- at <a href="mailto:kevin.robb@alumni.ou.edu">kevin.robb@alumni.ou.edu</a>. -->
-                                    <h1 class="button"><a onclick=" window.open('mailto:kevin.robb@alumni.ou.edu','_blank')">kevin.robb@alumni.ou.edu</a></h1>
-                                    <h3>And here are some other useful links:</h3>
-                                    <h1 class="button"><a onclick=" window.open('docs/resume_kevinrobb.pdf','_blank')">Resume</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://github.com/kevin-robb','_blank')">GitHub</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://www.youtube.com/channel/UCdxoB6xJBsmmi0iUU0E_yRA','_blank')">YouTube</a></h1>
-                                    <h1 class="button"><a onclick=" window.open('https://linkedin.com/in/kevin-robb-09b275145/','_blank')">LinkedIn</a></h1>
-                                </h3>
-                            </div>
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: left;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+    <!-- Add favicon image. -->
+    <link rel="shortcut icon" type="image/ico" href="images/KR_logo.png" id="favicon">
+</head>
+
+<body class="vignette">
+    <div id="main-container">
+        <div id="header">
+            <a href="index.html">
+                <img src="images/KR_logo.png" width="100" alt="KR" class="logo" />
+            </a>
+            <div class="logo-text">Kevin Robb Designs</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a onclick=" window.open('docs/resume.pdf','_blank')">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- make rows of images be the same height by using a table -->
+        <div class="container">
+            <div class="box">
+                <div class="box-row">
+                    <div class="box-cell box1">
+                        <img src="images/tour_guide_cropped.jpg" width="100%" alt="" />
+                    </div>
+                    <div class="box-text box2">
+                        <div>
+                            <h1>I'm Kevin!</h1> <br>
+                            <h3>
+                                Born and raised in Fort Worth, TX, I earned degrees in Engineering Physics and
+                                Mathematics at the University of Oklahoma, and am a current M.S. Robotics candidate at
+                                Northeastern University in Boston, MA. I'm also working at Piaggio Fast Forward as a
+                                robotics software engineer! My expected final graduation is December 2023.
+                                <br><br>
+                                My primary areas of interest in robotics are state estimation and navigation, and I have
+                                experience using ROS and Kalman filtering to perform mobile robot localization. I'm also
+                                skilled in machine learning, and have specialized in evolutionary computation for my
+                                largest research projects.
+                                I'm actively working to deepen and expand my skillset to more areas of robotics
+                                software, including EKF-SLAM, trajectory planning, and model predictive control.
+                                <br><br>
+                                My non-technical hobbies include playing soccer, tennis, and dungeons & dragons. I'm an
+                                artist and enjoy penwork and digital painting. I'm also passionate about helping people
+                                learn! I loved working as a campus tour guide during my time at OU, and have spent most
+                                of my life involved with STEM education projects. I try to make all my projects open
+                                source and available for folks to learn from, so if you have a question about anything
+                                I've done, just ask!
+                                <br><br>
+                                If you'd like to contact me, I can be best reached by email.
+                                <!-- at <a href="mailto:kevin.robb@alumni.ou.edu">kevin.robb@alumni.ou.edu</a>. -->
+                                <h1 class="button"><a
+                                        onclick=" window.open('mailto:kevin.robb@alumni.ou.edu','_blank')">kevin.robb@alumni.ou.edu</a>
+                                </h1>
+                                <h3>And here are some other useful links:</h3>
+                                <h1 class="button"><a
+                                        onclick=" window.open('docs/resume.pdf','_blank')">Resume</a></h1>
+                                <h1 class="button"><a
+                                        onclick=" window.open('https://github.com/kevin-robb','_blank')">GitHub</a></h1>
+                                <h1 class="button"><a
+                                        onclick=" window.open('https://www.youtube.com/channel/UCdxoB6xJBsmmi0iUU0E_yRA','_blank')">YouTube</a>
+                                </h1>
+                                <h1 class="button"><a
+                                        onclick=" window.open('https://linkedin.com/in/kevin-robb-09b275145/','_blank')">LinkedIn</a>
+                                </h1>
+                            </h3>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--  -->
         </div>
-    </body>
+        <!--  -->
+    </div>
+</body>
 
-    <footer>
-        <p>Kevin Robb Designs</p>
-    </footer> 
+<footer>
+    <p>Kevin Robb Designs</p>
+</footer>
+
 </html>

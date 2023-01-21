@@ -6,6 +6,14 @@ html {
     overflow-x: hidden;
 }
 
+/* Main website background */
+body {
+    background: #55BDCA;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Primary text color/style */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,15 +24,8 @@ html {
     font-weight: 400;
 }
 
-body {
-    /* background: rgb(253, 150, 68); */
-    /* background: rgb(32,178,170); */
-    background: #55BDCA;
-    /* 96FFFF */
-    max-width: 100%;
-    overflow-x: hidden;
-}
 
+/* Text for list items & buttons */
 li,
 a {
     font-family: "Montserrat", sans-serif;
@@ -34,52 +35,63 @@ a {
     color: rgb(255, 251, 245);
 }
 
+/* Paragraph text */
+p {
+    text-align: center;
+    color: white;
+}
+
+/* Center text by default in all divs */
+div {
+    text-align: center;
+}
+
+/* Make the nav bar right-align */
 nav {
     margin-left: auto;
 }
 
-#header {
-
+/* Define params for the header object on each page */
+header {
     width: 100vw;
     top: 0;
     left: 0;
-}
 
-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 10px;
-    /* background: rgb(14, 88, 85); */
     background: #022449;
 }
 
-.logo {
-    cursor: pointer;
+/* Footer color & size */
+footer {
+    padding: 3px;
+    background: #022449;
 }
 
+/* Main title text in header */
 .logo-text {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 64px;
     text-decoration: none;
     color: rgb(255, 251, 245);
-    /* color: #F27D42; */
 }
 
-.nav__links {
+/* Formatting for nav buttons in header */
+.nav-links {
     list-style: none;
     margin-left: auto;
 }
 
-.nav__links li {
+.nav-links li {
     display: inline-block;
     padding: 0px 40px;
 }
 
-.nav__links li a {
+.nav-links li a {
     transition: all 0.3s ease 0s;
-    /* background-color: rgb(26, 26, 26, 0); */
     background-color: #F27D42;
     padding: 4px 15px;
     border: none;
@@ -87,11 +99,11 @@ header {
     cursor: pointer;
 }
 
-.nav__links li a:hover {
-    /* background-color: rgb(26, 26, 26, .3); */
+.nav-links li a:hover {
     background-color: #55BDCA;
 }
 
+/* Adds vignette around border of entire website when used as body class */
 .vignette {
     position: relative;
     top: 0;
@@ -99,92 +111,17 @@ header {
     box-shadow: 0 0 200px rgba(0, 0, 0, 0.2) inset;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image {
-    padding: 5% 20;
-    padding-bottom: 70px;
-}
-
-#container {
+/* ID for main div inside body, ensures entire height is used and footer is forced to the very bottom */
+#main-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
 
-#content {
-    flex-grow: 1;
-    flex: 1;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#content-image {
-    flex-grow: 1;
-    flex: 1;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    cursor: default;
-}
-
-.button {
-    font-size: 40px;
-    /* background-color: rgb(3, 33, 43); */
-    /* background-color: #022449; */
-    background-color: #F27D42;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    width: fit-content;
-    display: inline-block;
-    margin: 2% auto;
-    padding: 5px 10px;
-}
-
-.image {
-    /* margin-top: 50px; */
-    margin-top: 10px;
-}
-
-.main-content {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    font-size: 96px;
-    text-decoration: none;
-    color: rgb(255, 251, 245);
-    text-align: center;
-}
-
-.main-content-about {
-    font-family: "Montserrat", sans-serif;
-    font-size: 46px;
-    text-decoration: none;
-    color: rgb(255, 251, 245);
-    text-align: center;
-}
-
-.animate {
+    /* animate fade in */
     animation: fadeInAnimation ease 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
-.animate-just-text {
-    animation: fadeInAnimation ease 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    margin-top: 1cm;
-}
-
 
 @keyframes fadeInAnimation {
     0% {
@@ -196,73 +133,51 @@ header {
     }
 }
 
-footer {
-    /* text-align: center; */
-    padding: 3px;
-    /* background-color: rgb(4, 145, 138); */
-    background: #022449;
-    color: white;
+/* Standalone text at the top of page, under the header */
+#just-text {
+    flex-grow: 1;
+    flex: 1;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    /* Give some leeway below the header */
+    margin-top: 1cm;
 }
 
-.textbox {
-    margin-bottom: 1cm;
-    /* align-items: center;
-    justify-content: center; */
-    width: 50%;
+/* Buttons for project links */
+.button {
+    font-size: 40px;
+    background-color: #F27D42;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: fit-content;
+    display: inline-block;
+    margin: 2% auto;
+    padding: 5px 10px;
 }
 
-/* trying to make gallery side-by-side images the same height */
-.container .box {
+/* Section of a container that can be used as the base for a project section or a row of images */
+.container-section {
     width: 90%;
-    /*540px; */
     margin: 5%;
-    /*50px;*/
-    /* display:table; */
     vertical-align: top;
     margin-bottom: 1cm;
+    margin-top: 1cm;
 }
 
-.container .box .box-row {
+.container-section .row {
     display: table-row;
-    vertical-align: top;
 }
 
-.container .box .box-cell {
+.container-section .cell {
     display: table-cell;
     border: 0;
-    /*1px solid black;*/
     width: 25%;
     padding: 10px;
     vertical-align: middle;
-}
-
-.container .box .box-text {
-    display: table-cell;
-    border: 0;
-    /*1px solid black;*/
-    width: 25%;
-    padding: 10px;
-    vertical-align: top;
-}
-
-/* Project sections with background and such */
-/* .container .box .box-project .box-row-project {
-    display:table-row;
-    vertical-align: top;
-} */
-.container .box .box-project {
-    background-color: #96FFFF;
-    border-radius: 25px;
-    /* display:table-row; */
-    vertical-align: top;
-    /* width: 100%; */
-    margin-top: 1cm;
-    /* margin-bottom: 3cm; */
-    /* border: 1px solid black; */
-    /* padding: 15px 30px 20px 40px; */
-    /* border-radius: 10%; */
-    /* border-collapse:separate; */
-    /* border-spacing:0 5px; */
 }
 
 /* Social Media icons */

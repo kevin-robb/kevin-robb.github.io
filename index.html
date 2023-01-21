@@ -20,14 +20,6 @@
             text-align: left;
         }
 
-        p {
-            text-align: center;
-        }
-
-        div {
-            text-align: center;
-        }
-
         /* Make images on this page circular. */
         img {
             border-radius: 50%;
@@ -40,56 +32,50 @@
 </head>
 
 <body class="vignette">
-    <div id="container">
-        <div id="header" class="animate">
-            <header>
-                <a href="index.html">
-                    <img src="images/KR_logo.png" width="100" alt="KR" class="logo" />
-                </a>
-                <div class="logo-text">Kevin Robb Designs</div>
-                <nav>
-                    <ul class="nav__links">
-                        <li><a href="projects.html">Projects</a></li>
-                        <!-- <li><a href="about.html">About</a></li> -->
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a onclick=" window.open('docs/resume.pdf','_blank')">Resume</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+    <div id="main-container">
+        <header>
+            <a href="index.html">
+                <img src="images/KR_logo.png" width="100" alt="KR" class="logo" />
+            </a>
+            <div class="logo-text">Kevin Robb Designs</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a onclick=" window.open('docs/resume.pdf','_blank')">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <div class="container">
-            <div class="box">
-                <div class="box-row">
-                    <div class="box-cell box1">
-                        <img src="images/headshot.jpg" width="100%" alt="Kevin's professional headshot" />
+        <div class="container-section">
+            <div class="row">
+                <div class="cell box1">
+                    <img src="images/headshot.jpg" width="100%" alt="Kevin's professional headshot" />
+                </div>
+                <div class="cell box2">
+                    <div>
+                        <h1>Kevin Robb</h1>
+                        <h2>Robotics Enthusiast, Student, and Engineer</h2>
+                        <!-- <h2>Aledo, TX → Norman, OK → Boston, MA</h2> -->
+
+                        <a onclick="window.open('https://github.com/kevin-robb','_blank')"
+                            class="fa fa-github fa-3x"></a>
+                        <a onclick="window.open('https://www.linkedin.com/in/kevin-robb-09b275145/','_blank')"
+                            class="fa fa-linkedin fa-3x"></a>
+                        <a onclick="window.open('https://www.youtube.com/channel/UCdxoB6xJBsmmi0iUU0E_yRA','_blank')"
+                            class="fa fa-youtube fa-3x"></a>
+
+                        <!-- <h1 class="button"><a onclick=" window.open('docs/resume_kevinrobb.pdf','_blank')">Resume</a> -->
+
+                        <!-- <h3>I'm a robotics hobbyist, enthusiast, student, and engineer! I'm finishing up the last year of my Robotics M.S. @ NEU and working part-time as a robotics software engineer @ PFF. My main area of experience is mobile robot localization & autonomous behavior, such as path planning & navigation. In my projects over the years, I've implemented complex concepts such as extended & unscented Kalman filters, particle filters, and genetic algorithms from the ground-up. My main career interest is working to expand perception & autonomy for robotic platforms. Nothing is more fun & fulfilling than making robots do cool things!</h3> -->
                     </div>
-                    <div class="box-cell box2">
-                        <div>
-                            <h1>Kevin Robb</h1>
-                            <h2>Robotics Enthusiast, Student, and Engineer</h2>
-                            <!-- <h2>Aledo, TX → Norman, OK → Boston, MA</h2> -->
-
-                            <a onclick="window.open('https://github.com/kevin-robb','_blank')"
-                                class="fa fa-github fa-3x"></a>
-                            <a onclick="window.open('https://www.linkedin.com/in/kevin-robb-09b275145/','_blank')"
-                                class="fa fa-linkedin fa-3x"></a>
-                            <a onclick="window.open('https://www.youtube.com/channel/UCdxoB6xJBsmmi0iUU0E_yRA','_blank')"
-                                class="fa fa-youtube fa-3x"></a>
-
-                            <!-- <h1 class="button"><a onclick=" window.open('docs/resume_kevinrobb.pdf','_blank')">Resume</a> -->
-
-                            <!-- <h3>I'm a robotics hobbyist, enthusiast, student, and engineer! I'm finishing up the last year of my Robotics M.S. @ NEU and working part-time as a robotics software engineer @ PFF. My main area of experience is mobile robot localization & autonomous behavior, such as path planning & navigation. In my projects over the years, I've implemented complex concepts such as extended & unscented Kalman filters, particle filters, and genetic algorithms from the ground-up. My main career interest is working to expand perception & autonomy for robotic platforms. Nothing is more fun & fulfilling than making robots do cool things!</h3> -->
-                        </div>
-                    </div>
-                    <div class="box-cell box3">
-                        <img src="images/robotfloor.jpg" width="100%"
-                            alt="Kevin laying on the lab floor surrounded by small robots" />
-                    </div>
+                </div>
+                <div class="cell box3">
+                    <img src="images/robotfloor.jpg" width="100%"
+                        alt="Kevin laying on the lab floor surrounded by small robots" />
                 </div>
             </div>
         </div>
-        <!--  -->
     </div>
 </body>
 
