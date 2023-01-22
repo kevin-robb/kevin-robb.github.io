@@ -8,7 +8,7 @@
     --bg: #55BDCA;
     --dark: #022449;
     --accent: #F27D42;
-  }
+}
 
 html {
     overflow: scroll;
@@ -173,8 +173,8 @@ footer {
     width: 90%;
     margin: 5%;
     vertical-align: top;
-    margin-bottom: 1cm;
-    margin-top: 1cm;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
 }
 
 .container-section .row {
@@ -185,19 +185,35 @@ footer {
     display: table-cell;
     border: 0;
     width: 25%;
-    padding: 10px;
-    vertical-align: middle;
+    padding: 1vh;
+    vertical-align: top;
 }
+
+/* Regular unorder lists for project descriptions */
+.list-text {
+    text-align: left;
+    /* list-style: none; */
+    /* margin-left: auto; */
+    padding: 0vh 4vh;
+}
+
+.list-text li {
+    /* display: inline-block; */
+    /* padding: 0px 40px; */
+    color: var(--dark);
+    font-size: 2.5vh;
+}
+
 
 /* "Font Awesome" icons */
 .fa {
-    padding: 20px;
-    font-size: 50px;
-    width: 90px;
-    height: 90px;
+    padding: 2vh;
+    font-size: 5vh;
+    width: 9vh;
+    height: 9vh;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
+    margin: 1vh 0.5vh;
     border-radius: 50%;
 }
 
@@ -226,6 +242,11 @@ footer {
 }
 
 .fa-file {
+    background: var(--dark);
+    color: white;
+}
+
+.fa-globe {
     background: var(--dark);
     color: white;
 }
