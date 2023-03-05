@@ -5,9 +5,10 @@
 
 /* Define colors globally to make changing color scheme easy */
 :root {
-    --bg: #55BDCA;
-    --dark: #022449;
-    --accent: #F27D42;
+    --bg: #58A4B0;
+    --dark: #242038;
+    --accent: #FB3640;
+    --project: #D3C0D2;
 }
 
 html {
@@ -186,7 +187,7 @@ footer {
     border: 0;
     width: 25%;
     padding: 1vh;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 /* Regular unorder lists for project descriptions */
